@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-
 import ua.lviv.iot.uklon.model.annotation.Table;
 import ua.lviv.iot.uklon.model.connectors.ConnectionManager;
 import ua.lviv.iot.uklon.model.dataaccess.DataAccess;
@@ -93,8 +92,8 @@ public abstract class AbstractDataAccess<E, K> implements DataAccess<E, K> {
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-          boolean ValueSetFlag = entityTranformer.setPreparedStatementWithType(1, preparedStatement, fieldValue);
-          if (!ValueSetFlag) {
+          boolean valueSetFlag = entityTranformer.setPreparedStatementWithType(1, preparedStatement, fieldValue);
+          if (!valueSetFlag) {
             return null;
           }
 

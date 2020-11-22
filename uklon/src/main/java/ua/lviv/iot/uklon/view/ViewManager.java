@@ -2,7 +2,6 @@ package ua.lviv.iot.uklon.view;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.math.BigDecimal;
 import java.sql.Date;
 import java.sql.SQLException;
 import java.util.LinkedList;

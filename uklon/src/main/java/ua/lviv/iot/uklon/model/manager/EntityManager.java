@@ -7,7 +7,7 @@ import java.util.List;
 import ua.lviv.iot.uklon.model.annotation.Table;
 import ua.lviv.iot.uklon.model.annotation.PrimaryKey;
 import ua.lviv.iot.uklon.model.annotation.Column;
-import ua.lviv.iot.uklon.model.annotation.InputIgnore;;
+import ua.lviv.iot.uklon.model.annotation.InputIgnore;
 
 public class EntityManager<E, K> {
 
@@ -47,7 +47,6 @@ public class EntityManager<E, K> {
     for (Field field : fields) {
       if (field.isAnnotationPresent(PrimaryKey.class)) {
         field.setAccessible(true);
-        ;
         return (K) field.get(entity);
       }
     }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="33" tokens="181">
+      <file column="55" endcolumn="10" endline="166" line="134"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\Driver.java"/>
+      <file column="55" endcolumn="10" endline="147" line="115"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\Passenger.java"/>
+      <codefragment><![CDATA[    } else if (!driveLicense.equals(other.driveLicense))
+      return false;
+    if (id == null) {
+      if (other.id != null)
+        return false;
+    } else if (!id.equals(other.id))
+      return false;
+    if (name == null) {
+      if (other.name != null)
+        return false;
+    } else if (!name.equals(other.name))
+      return false;
+    if (rate == null) {
+      if (other.rate != null)
+        return false;
+    } else if (!rate.equals(other.rate))
+      return false;
+    if (surName == null) {
+      if (other.surName != null)
+        return false;
+    } else if (!surName.equals(other.surName))
+      return false;
+    if (telNum == null) {
+      if (other.telNum != null)
+        return false;
+    } else if (!telNum.equals(other.telNum))
+      return false;
+    return true;
+  }
+
+  @Override
+  public String toString() {
+    return "Driver [id=" + id + ", telNum=" + telNum + ", name=" + name + ", surName=" + surName + ", countOfOrders="]]></codefragment>
+   </duplication>
+   <duplication lines="39" tokens="170">
+      <file column="14" endcolumn="18" endline="58" line="20"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\City.java"/>
+      <file column="19" endcolumn="18" endline="58" line="20"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\OrderType.java"/>
+      <file column="17" endcolumn="18" endline="58" line="20"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\Streets.java"/>
+      <codefragment><![CDATA[  public City(Integer id, String name) {
+    super();
+    this.id = id;
+    this.name = name;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public int hashCode() {
+    final int prime = 31;
+    int result = 1;
+    result = prime * result + ((id == null) ? 0 : id.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;]]></codefragment>
+   </duplication>
+   <duplication lines="17" tokens="153">
+      <file column="73" endcolumn="18" endline="124" line="108"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\Driver.java"/>
+      <file column="73" endcolumn="18" endline="110" line="94"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\entity\Passenger.java"/>
+      <codefragment><![CDATA[    result = prime * result + ((driveLicense == null) ? 0 : driveLicense.hashCode());
+    result = prime * result + ((id == null) ? 0 : id.hashCode());
+    result = prime * result + ((name == null) ? 0 : name.hashCode());
+    result = prime * result + ((rate == null) ? 0 : rate.hashCode());
+    result = prime * result + ((surName == null) ? 0 : surName.hashCode());
+    result = prime * result + ((telNum == null) ? 0 : telNum.hashCode());
+    return result;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj)
+      return true;
+    if (obj == null)
+      return false;
+    if (getClass() != obj.getClass())
+      return false;]]></codefragment>
+   </duplication>
+   <duplication lines="22" tokens="129">
+      <file column="40" endcolumn="8" endline="70" line="49"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\dataaccess\implementation\AbstractDataAccess.java"/>
+      <file column="55" endcolumn="8" endline="120" line="100"
+            path="C:\DiskD\Projects\DB\DB_4_lab\uklon\src\main\java\ua\lviv\iot\uklon\model\dataaccess\implementation\AbstractDataAccess.java"/>
+      <codefragment><![CDATA[          try (ResultSet resultSet = ps.executeQuery()) {
+            while (resultSet.next()) {
+              entityList.add(entityTranformer.fromResultSetToEntity(resultSet));
+            }
+          } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+              | InvocationTargetException | NoSuchMethodException | SecurityException e) {
+            System.out.println(String.format(ERROR_EXEPTION_FORMAT, "transforming data into objects"));
+            System.out.println(String.format(ERROR_MESSAGE_FORMAT, e.getMessage()));
+          }
+        }
+      } catch (IOException e) {
+        System.out.println(String.format(ERROR_EXEPTION_FORMAT, "getting credentials to database"));
+        System.out.println(String.format(ERROR_MESSAGE_FORMAT, e.getMessage()));
+      }
+    }
+
+    return entityList;
+
+  }
+
+  @Override
+  public E findById(K id) throws SQLException {]]></codefragment>
+   </duplication>
+</pmd-cpd>
